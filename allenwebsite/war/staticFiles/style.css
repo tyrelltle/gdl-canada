@@ -1,0 +1,872 @@
+/*#apDiv1 { position:relative; width:863px; height:164px; z-index:3; top: 0;}*/
+/*#SelHomePage{border:solid 1px #ffb52f;}*/
+ 
+.select {border:1px #ffb52f solid; overflow:hidden; display:inline-block; width:145PX;*width:140px; height:20px;*height:17px}
+.select select {margin:-1px;width:147PX;height:20px;*height:24px;*margin-top:-3px;*margin-left:-2px;}
+ 
+.selectcountry{border:1px #ffb52f solid; overflow:hidden; display:inline-block; width:198PX;*width:195px; height:17px;*height:17px}
+.selectcountry select {margin-top:-3px;margin-bottom:-1px;margin-left:-1px;margin-right:-1px; width:202PX;height:20px;*height:25px;*margin-top:-3px;*margin-left:-2px;}
+
+.SetMapselect {border:1px #ffb52f solid; overflow:hidden; display:inline-block; width:145PX;*width:140px; height:20px;*height:17px;}
+.SetMapselect select {margin:-1px;width:147PX;height:20px;*height:24px;*margin-top:-3px;*margin-left:-2px;}
+
+.selectServer{border:1px #ffb52f solid; overflow:hidden; display:inline-block;margin-left:12px;width:296PX;*width:298px; height:17px;*height:17px;*margin-left:12px;}
+.selectServer select {margin-top:-3px;margin-bottom:-1px;margin-left:5px;margin-right:-1px; width:294PX;*width:302PX;height:20px;*height:25px;*margin-top:-3px;*margin-left:-2px;}
+ 
+.menu{
+	z-index:1500;
+}
+#jumpMenu{
+	border:solid 1px #ffb52f;
+}
+.padding-left{
+
+	padding-left:80px;
+	clear:both;
+	zoom:1;
+	overflow:hidden;
+}
+#apDiv1 {
+ position:relative;
+ width:1000px;
+ height:165px;
+ z-index:15;
+ top: 0;
+ }
+#apDiv1 ul.bg{
+	background:url(header_none.png) no-repeat top center;
+ height:220px;
+	padding:26px 0 0 26px;
+ margin:0;
+
+}
+#apDiv1 div.left{
+	float:left;
+	width:300px;
+}
+#apDiv1 div.right{
+	float:right;
+	width:165px;
+	margin-top:-3px;
+	text-align:right;	
+	color:#a6a6a6;
+	line-height:20px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+#apDiv1 div.APSetMapright{
+	float:right;
+	width:165px;
+	margin-top:-16px;
+	text-align:right;	
+	color:#a6a6a6;
+	line-height:20px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+#apDiv1 div.CountrySetMapright{
+	float:right;
+	width:165px;
+	margin-top:-16px;
+	text-align:right;	
+	color:#a6a6a6;
+	line-height:20px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+#apDiv1 div.right ul,#apDiv1 div.right li{
+	padding:0;
+	margin:0;
+}
+#apDiv1 div.right select{
+
+	color:#666;
+	line-height:22px;
+	font-weight:bold;
+	font-size:12px;
+	height:22px;
+	width:160px;
+}
+#apDiv1 div.right option{
+	font-weight:bold;
+	line-height:26px;
+
+}
+#apDiv2 {
+ float:left;
+  width:323px;
+ height:620px;
+ z-index:5;
+ position: absolute;
+ top:20px;
+  left:inherit;
+ }
+#apDiv2_map {
+ float:left;
+  width:323px;
+ height:620px;
+ z-index:2;
+ position: absolute;
+ top:0px;
+ left:inherit;
+ }
+#apDiv3 {
+ float:right;
+ height:480px;
+ position:relative;
+ top:-80px;
+ z-index:1;
+ }
+#apDiv4 {
+ position:absolute;
+ top:620px;
+ width:1000px;
+ height:25px;
+ z-index:8;
+ line-height: 24px;
+ background-image: url(images/bottom.jpg);
+ background-repeat: no-repeat;
+ text-align: right;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:10px;
+ line-height:24px;
+ color: #FFF;
+ }
+ #apDiv4 a{
+	 color:#fff;
+	 text-decoration:none;
+ }
+  #apDiv4 a:hover{
+	 color:#000;
+	 text-decoration:none;
+ }
+#apDiv4_guojia {
+ position:absolute;
+ top:620px;
+ margin-left:240px;
+ width:80px;
+ height:25px;
+ z-index:20;
+ line-height: 24px;
+ z-index:100;
+}
+#apDiv4_map {
+ position:absolute;
+ top:680px;
+ width:1000px;
+ height:25px;
+ z-index:8;
+ line-height: 24px;
+ background-image: url(images/bottom.jpg);
+ background-repeat: no-repeat;
+ text-align: right;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:11px;
+ line-height:24px;
+ color: #FFF;
+ }
+
+#apDiv5_map {
+ position:absolute;
+ top:705px;
+ width:1000px;
+ height:25px;
+ z-index:8;
+ line-height: 24px;
+ background-repeat: no-repeat;
+ text-align: right;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:11px;
+ line-height:24px;
+ color: Gray;
+ }
+   #apDiv5_map a{
+	 color:Gray;
+	 text-decoration:none;
+ }
+  #apDiv5_map a:hover{
+	 color:Gray;
+	 text-decoration:none;
+ }
+ 
+ #apBottomBar {
+ position:absolute;
+ top:645px;
+ width:1000px;
+ height:25px;
+ z-index:8;
+ line-height: 24px;
+ background-repeat: no-repeat;
+ text-align: right;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:10px;
+ line-height:24px;
+ color: Gray;
+ }
+  #apBottomBar a{
+ color:Gray;
+ text-decoration:none;
+ }
+  #apBottomBar a:hover{
+ color:Gray;
+ text-decoration:none;
+ }
+
+ 
+#apDivSingapore {
+ position:absolute;
+ top:620px;
+ width:1000px;
+ height:25px;
+ z-index:8;
+ line-height: 24px;
+ background-image: url(images/bottom_Singapore.jpg);
+ background-repeat: no-repeat;
+ text-align: right;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:11px;
+ line-height:24px;
+ color: #FFF;
+ }
+
+#apDiva {
+ float:right;
+ z-index:0;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ line-height: 17px;
+ color: #2d2d2d;
+ width: 793px;
+ height:400px;
+ text-align: left;
+  background-image:url(images/AboutUs_bg.jpg);
+ position: relative;
+ top:-60px;
+  }
+div#careers{
+	padding-left:65px;
+	width:430px;
+	height:320px;
+	z-index:-1;
+	float:left;
+	overflow:auto;
+	clear:both;
+}
+div#careers dl{
+	clear:both;
+}
+div#careers dt{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#000;
+	clear:both;
+	font-weight:bold;
+	margin-top:15px;
+}
+div#careers dd{ 
+zoom:1;
+overflow:hidden;
+line-height:26px;
+margin:0;
+padding:0; 
+background:url(images/dia.gif) no-repeat left center;
+padding-left:15px;
+}
+div#careers dd span{
+	float:left;
+	width:250px;
+}
+div#careers dd a{
+	float:right;
+	width:50px;
+	color:#333;
+	text-decoration:underline;
+}
+#apDivmap {
+ float:right;
+ z-index:0;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ line-height: 17px;
+ color: #2d2d2d;
+ width: 793px;
+ height:400px;
+ text-align: left;
+  background-image:url(images/AboutUs_bg.jpg);
+ position: absolute;
+ top:234px;
+ margin-left:207px;
+ }
+
+#apDiva2 {
+ float:right;
+ z-index:0;
+ width: 793px;
+ heigh;
+ position: relative;
+ top:-60px;
+   }
+
+#apDivb{
+ float:right;
+ z-index:0;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ line-height: 17px;
+ color: #2d2d2d;
+ width: 795px;
+ height:400px;
+ text-align: left;
+ background-image:url(images/AboutUs_bg.jpg);
+ position: relative;
+ top:-94px;
+ /*right:2px;*/
+}
+
+a {
+outline: none;
+}
+a:active {
+star:expression(this.onFocus=this.blur());
+}
+
+#Login{
+ float:right;
+ z-index:0;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ line-height: 17px;
+ color: #2d2d2d;
+ width: 793px;
+ height:500px;
+ text-align: left;
+  background-image:url(images/AboutUs_bg.jpg);
+ position: relative;
+ top:-70px;
+ right:2px;
+ }
+#Logintitle {
+ float:right;
+ font-family:menu,Arial;
+ font-size:20px;
+ color:#f26317;
+ z-index:5;
+ position:relative;
+ right:10px;
+ top:-380px;
+ width:450px;
+ line-height:25px;
+ }
+#Loginline {
+ height:2px;
+ float:right;
+ background:#b0aa9c;
+ }
+.Loginform {
+ height:16px;
+ width:200px;
+ font-size:12px;
+}
+
+#Loginpass {
+ float:right;
+ color:#FFF;
+ font-family:menu, Arial;
+ font-size:18px;
+ height:112px;
+ float:right;
+ background-image: url(images/Login_04.jpg);
+ background-repeat: no-repeat;
+ width: 192px;
+ position: relative;
+ top: 114px;
+  right:-250px;
+ text-align: left;
+ }
+
+#apDivimg {
+ z-index:-2;
+  float:right;
+ top:-4px;
+ position:absolute;
+ top:120px;
+ right:0px;
+}
+/*#copy_title {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 15px;
+ padding:0 0 0 15px;
+ line-height: 40px;
+ font-weight: bold;
+ margin:10px 0 10px 66px;
+ color: #2d2d2d;
+ width:310px;
+ background:url(images/menu_icon.jpg) no-repeat left center;
+ height:40px;
+ line-height:40px;
+ zoom:1;
+ overflow:hidden;
+ }*/
+ #copy_title { font-family: Arial, Helvetica, sans-serif; font-size: 15px; padding-top:10px; line-height: 40px; font-weight: bold; color: #2d2d2d; width:550px; height:40px; }
+ 
+ div.right_box{
+	 float:right;
+	 width:310px;
+	 zoom:1;
+	 overflow:hidden;
+ }
+ .right_title{
+	 margin-left:0;
+ }
+/*#ContactUs_form {
+ height: 22px;
+ width: 300px;
+ margin-left: 10px;
+ border: 1px solid #ffb52f;
+ }*/
+#ContactUs_form2 {
+ border: 1px solid #ffb52f;
+ overflow: hidden;
+ margin-top: 10px;
+ margin-left: 10px;
+ float: left;
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ height: 46px;
+ width: 300px;
+ }
+.ContactUs_form3{
+ height: 18px;
+ width: 192px;
+ border: 1px solid #ffb52f;
+ margin-top: 5px;
+ margin-left:12px;
+ }
+
+.Contact_Us {
+ height: 158px;
+ width: 256px;
+ font-family: Arial;
+ margin-left:15px;
+ font-size: 10px;
+ line-height:16px;
+ font-weight: normal;
+ color:#2d2d2d;
+ zoom:1;
+ overflow:hidden;
+ }
+ .Contact_Us ul{
+	 font-size:12px;
+	 margin:10px;
+	 line-height:20px;
+	 padding:0;
+ }
+  .Contact_Us li{
+	  margin:0;
+	  padding:0;
+  }
+
+div#map_txt{
+	clear:both;
+	background:url(images/menu_icon.jpg) no-repeat 1px 22px;
+	padding:15px 0px;
+  }
+div#map_txt div.top{
+	height:22px;
+	padding-left:25px;
+}	  
+div#map_txt select.map_list{
+	 width:200px;
+	 clear:both;
+	 border:solid 1px #ffb52f;
+ }
+div#map_txt div.map_show{
+	margin-top:5px;
+	width:256px;
+}
+div#map_txt div.show_contact{
+	margin:0;
+	zoom:1;
+	overflow:hidden;
+}
+div#map_txt div.map_show dl{
+	clear:both;
+	margin:0;
+	padding:10px;
+}
+div#map_txt div.map_show dt{
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#000;
+	line-height:22px;
+	display:block;
+	margin-left:15px;
+}
+div#map_txt div.map_show dd{
+		margin-left:15px;
+	padding:0;
+	line-height:20px;
+	font-weight:normal;
+}
+#contact_us_b {
+ background-image: url(images/contact_us_b.jpg);
+ height: 26px;
+ width: 74px;
+ background-repeat: no-repeat;
+ border-top-width: 0px;
+ border-right-width: 0px;
+ border-bottom-width: 0px;
+ border-left-width: 0px;
+ border-top-style: 0px;
+ border-right-style: 0px;
+ border-bottom-style: 0px;
+ border-left-style: 0px;
+ margin-left: 5px;
+ }
+ .contact_box{
+	 zoom:1;
+	 overflow:hidden;
+	 padding-left:65px;
+ }
+.massage{
+	float:left;
+	width:310px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 120%;
+	padding-top:18px;
+	font-weight: bold;
+	color: #2d2d2d;
+}
+div#download{
+	background:url(images/dian_b.gif) no-repeat -2px 1px #f6801e;
+	display:block;
+	float:left;
+	height:18px;
+	line-height:16px;
+	padding:1px 10px 1px 15px;
+	font-size:12px;
+	font-weight:bold;
+	color:#fff;
+}
+div#download a{
+	color:#fff;
+	text-decoration:none;
+}
+div#download a:hover{
+	color:#000;
+	text-decoration:none;
+}
+li{
+list-style-type:none;
+}
+
+#myfiter{
+
+	background:rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+filter:Alpha(opacity=0);
+ background-color:#000;
+ position: absolute;
+ top: 0px;
+ left: 50;
+  width: 300px;
+ height:444px;
+ z-index:13}
+
+body { text-align:justify;
+ margin:0 auto;
+ }
+ @font-face {
+
+font-family:'menu';
+
+src: url('font/castleb0.TTF') format('truetype');
+
+font-weight:bold;
+
+font-style: normal;
+}
+
+
+#copy {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ line-height: 17px;
+ font-weight: normal;
+ color: #2d2d2d;
+ text-align: left;
+ width: 460px;
+ }
+
+.dian2 {
+ font-size: 10px;
+ font-family: Arial, Helvetica, sans-serif;
+ color: #111111;
+ line-height: 8px;
+ width:8px;
+ height:4px;
+ vertical-align: top;
+ }
+
+.dian {
+ overflow:hidden;
+ font-family: Arial;
+ font-size: 36px;
+ line-height: 8px;
+ position: relative;
+ height: 5px;
+ bottom: 3px;
+ }
+#About_img{
+ float:left;
+ padding:20px 30px 10px 10px;
+ width:150;
+ height:180px;
+}
+#About_text{
+ padding:20px 0px 0px 0px;
+ width:440;
+ }
+
+#worldmap{
+ float:left;
+ background-image:url(images/Our_Locations_01.png);
+ font-family: menu, Arial;
+ font-size: 16px;
+ background-repeat: no-repeat;
+ color: #626262;
+ height: 352px;
+ width: 450px;
+ }
+
+#x2{
+ background-position:right center;
+ background-image: url(images/tlevel_icon.png);
+ background-repeat: no-repeat;
+}
+#x3{
+ background-position:right center;
+ background-image: url(images/tlevel_icon.png);
+ background-repeat: no-repeat;
+ }
+#x4{
+ background-position:right center;
+ background-image: url(images/tlevel_icon.png);
+ background-repeat: no-repeat;
+ }
+#x5{
+ background-position:right center;
+ background-image: url(images/tlevel_icon.png);
+ background-repeat: no-repeat;
+ }
+#x6{
+ background-position:right center;
+ background-image: url(images/tlevel_icon.png);
+ background-repeat: no-repeat;
+ }
+#x7{
+ background-position:right center;
+ background-image: url(images/tlevel_icon.png);
+ background-repeat: no-repeat;
+ }
+#myfitertop{
+background:rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+filter:Alpha(opacity=0);
+ background-color:#000;
+ position: absolute;
+ top: 170px;
+ left: 50px;
+  width: 100px;
+ height:200px;
+ z-index:18;
+ margin-left:100px;
+}
+
+#myfiterbottom{
+background:rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+filter:Alpha(opacity=0);
+ background-color:#06F;
+ position: absolute;
+ top: 170px;
+ left: 150px;
+  width: 150px;
+ height:200px;
+ z-index:13;
+ margin-left:100px;
+}
+
+/*#map_all{
+ width:550px;
+ height:320px;
+ background-image:url(images/map/map_2.png);
+}
+*/
+#map_1{
+ width:550px;
+ height:320px;
+ background-image:url(images/map/map_3.png);
+ background-repeat:no-repeat;
+ background-position:center 20px;
+}
+
+#map_China{
+ width:550px;
+ height:320px;
+ background-image:url(images/map/map_5.png);
+ background-repeat:no-repeat;
+ background-position:center 0px;
+}
+#map_HongKong{
+ width:550px;
+ height:320px;
+ background-image:url(images/map/map_6.png);
+ background-repeat:no-repeat;
+ background-position:center 0px;
+}
+#map_Indonesia{
+ width:550px;
+ height:320px;
+ background-image:url(images/map/map_7.png);
+ background-repeat:no-repeat;
+ background-position:center 0px;
+}
+#map_Japan{
+ width:550px;
+ height:320px;
+ background-image:url(images/map/map_8.png);
+ background-repeat:no-repeat;
+ background-position:center 0px;
+}
+
+
+#map_Philippines{
+ width:550px;
+ height:320px;
+ background-image:url(images/map/map_13.png);
+ background-repeat:no-repeat;
+ background-position:center 0px;
+}
+#map_Singapore{
+ width:550px;
+ height:320px;
+ background-image:url(images/map/map_14.png);
+ background-repeat:no-repeat;
+ background-position:center 0px;
+}
+
+#map_Thailand{
+ width:550px;
+ height:320px;
+ background-image:url(images/map/map_16.png);
+ background-repeat:no-repeat;
+ background-position:center 0px;
+}
+
+#date {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ color: #f65a1f;
+ border-bottom-width: 1px;
+ border-bottom-style: solid;
+ border-bottom-color: #f65a1f;
+ }
+
+.bmenu{
+font-family: Arial;
+ position:relative;
+ font-size:14px;
+  width:90px;
+}
+.bmenu ul li a, .bmenu ul li a:visited {
+display:block;
+ text-decoration:none;
+ width:90px;
+ height:22px;
+ text-align:left;
+ color:#f8670b;
+ padding-left:8px;
+ line-height:25px;
+ font-size:11px;
+ }
+.bmenu ul {
+padding:0;
+ margin:0;
+list-style-type: none;
+}
+.bmenu ul li {
+float:left;
+ position:relative;
+}
+.bmenu ul li ul {
+visibility:hidden;
+ position:absolute;
+ top:-330px;
+}
+
+.bmenu table {
+border-collapse:collapse;
+ margin:0;
+ padding:0;
+ font-size:1em;
+ margin:0px;
+}
+
+.bmenu ul li:hover a, .bmenu ul li a:hover {
+color:#f8670b;
+ }/* 本身触摸颜色*/
+
+.bmenu ul li:hover ul, .bmenu ul li a:hover ul {
+visibility:visible;
+ bottom:22px;
+ left:0;
+}
+
+.bmenu ul li:hover ul li, .bmenu ul li a:hover ul li {
+display:block;
+  color:#000;
+width:90px;
+ clear:both;
+}/* 一级颜色*/
+
+.bmenu ul li:hover ul li ul, .bmenu ul li a:hover ul li a ul {
+visibility:hidden;
+ position:absolute;
+}
+
+.bmenu ul li:hover ul li a, .bmenu ul li a:hover ul li a {
+ display:block;
+ background-color:#fec93e;
+ width:100%;
+ padding-left:10px;
+ background-repeat: repeat;
+ }/* 一級背景 */
+
+.bmenu ul li:hover ul li a:hover, .bmenu ul li a:hover ul li a:hover {
+background:#f0b928;
+ color:#000;
+}/*一級觸摸顏色*/
+
+.bmenu ul li:hover ul li:hover ul, .bmenu ul li a:hover ul li a:hover ul {
+visibility:visible;
+ left:210px;
+ bottom:0;
+}
+
+.bmenu ul li:hover ul.left, .bmenu ul li a:hover ul.left {
+left:-105px;
+}
+
+.bmenu ul li:hover ul li:hover ul.left, .bmenu ul li a:hover ul li a:hover ul.left {
+left:-210px;
+ width:209px;
+}
+
+#apDiv3_Singapore { float:right; height:480px; position: absolute; top:0px; margin-left:210px; z-index:0; }
+
+#apDivSingapore { position:absolute; top:620px; width:1000px; height:25px; z-index:8; line-height: 24px; background-image: url(images/bottom_Singapore.jpg); background-repeat: no-repeat; text-align: right; font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height:24px; color: #FFF; }
+
+/*#SelCountryContact {
+	 width:200px;
+	 clear:both;
+	 border:solid 1px #ffb52f;
+}*/

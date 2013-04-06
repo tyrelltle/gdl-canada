@@ -1,0 +1,23 @@
+
+/* common styling */
+.menu {font-family: arial;  width:200px; font-size:17px; margin:50px 0; z-index:14; position:absolute; top:110px;}
+.menu ul li a, .menu ul li a:visited { display:block; color:#000;  text-align:right; color:#ff9a00; font-size:17px; overflow:hidden; font-family: Arial;  }/*全部*/
+.menu ul a, .menu ul a:visited { display:block; text-decoration:none; color:#000; width:200px;  text-align:right; color:#ff9a00; font-size:17px; overflow:hidden; font-family: Arial;  background-image: url(../images/menu_icon.JPG); background-repeat: no-repeat; background-position: right  6px;}/*全部*/
+.menu ul { padding:8px; margin:6px 0px 1px 0px; list-style-type: none; }/*二 三级框*/
+.menu ul li { float:left; margin-right:1px; position:relative; height:26px;*height:16px;  font-family: arial; }
+.menu ul li ul li {float:left; margin-right:1px; position:relative; height:26px;}/*二级菜单高度*/
+.menu ul li ul li a{font-family: arial;}/*二级菜单字体*/
+.menu ul li ul {display: none;}
+/* specific to non IE browsers */
+
+.menu ul li:hover a { color:#e2480c; height:26px; background-image: url(../images/menu_icon2.JPG); background-repeat: no-repeat; background-position: right 6px;}
+.menu ul li:hover ul { display:block; position:absolute; top:0; left:90px; width:180px; background-image: url(../images/white_bg.PNG); border: 1px solid #ff9a00; background-repeat: repeat; z-index:16}/*二级*/
+.menu ul li:hover ul li a.hide { font-size:12px;}/*三级文字*/
+.menu ul li:hover ul li:hover a.hide { width:178px; color:#ff5a00; background-image:url(../images/tlevel_icon.png); background-repeat: no-repeat; background-position: right; }
+
+.menu ul li:hover ul li ul {display: none; }
+.menu ul li:hover ul li a { display:block; color:#000; width:200px; text-align:left; font-size:12px; margin:0; line-height:20px; background-image: none; }/*二级文字*/
+.menu ul li:hover ul li a:hover { color:#ff5a00; width: 170px;}/*二级移上去的背景*/
+.menu ul li:hover ul li:hover ul {display:block; position:absolute; left:181px; top:0;}
+
+A.style1:visited  { display:block; text-decoration:none; color:#000; width:200px;  text-align:right; color:#ff9a00; font-size:17px; overflow:hidden; font-family: Arial;   background-position: right  6px;}
