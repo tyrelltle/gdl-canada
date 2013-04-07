@@ -10,8 +10,24 @@
 	<script type="text/javascript">
 	Shadowbox.init();
 	</script>
+	
+	
+	
+<style type="text/css" media="screen">
+body {
+	margin:50px 0px; padding:0px; /* Need to set body margin and padding to get consistency between browsers. */
+	text-align:center; /* Hack for IE5/Win */
+	}
+	
+#Content {
+	width:500px;
+	margin:0px auto; /* Right and left margin widths set to "auto" */
+	text-align:left; /* Counteract to IE5/Win Hack */
+	padding:15px;
+	}
+</style>	
 </head>
-<body>
+<body id="Content">
 
 <jsp:useBean id="gallaryBean" class="com.allen.website.bean.GallaryBean" /> 
 <%
@@ -32,7 +48,7 @@
 
 	<FORM ENCTYPE="multipart/form-data" ACTION="addImage" METHOD=POST>
 		<br><br><br>
-			<table border="2">
+			<table  border="2" float="center">
 				<tr>	
 						<td colspan="2"><p align="center">
 								<B>PROGRAM FOR UPLOADING THE FILE</B>
@@ -66,7 +82,7 @@
 		<tr>
 		<%} 
 			numcol++;
-			if(numcol>5)
+			if(numcol>2)
 			numcol=0;%>
 			<td>
 				<a href="getImage?title=<%=titles[i]%>" rel="shadowbox;player=img">
