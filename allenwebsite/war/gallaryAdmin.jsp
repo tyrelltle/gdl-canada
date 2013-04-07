@@ -5,6 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Gallery aDMIN</title>
+<link rel="stylesheet" type="text/css" href="staticFiles/shadowbox-3.0.3/shadowbox.css">
+	<script type="text/javascript" src="staticFiles/shadowbox-3.0.3/shadowbox.js"></script>
+	<script type="text/javascript">
+	Shadowbox.init();
+	</script>
 </head>
 <body>
 
@@ -54,30 +59,31 @@
 
 
 
-					<table>
-						<%int numcol=1; %>
-						<% for (int i=0;i<titles.length;i++) {
-								numcol++;
-								if(numcol>6)
-									numcol=0;
-						
-						%>
-						<%if(numcol==0){ %>
-							<tr>
-						<%  } %>
-								<td><img alt="" src="getImage?title=<%=titles[i]%>"></img>
-								<br/>
-									<FORM ENCTYPE="multipart/form-data" ACTION="delimage?title=<%=titles[i] %>" METHOD=POST>
-										
-										<INPUT TYPE="submit" VALUE="delete">
-										
-									</FORM>
-								</td>
-						<%if(numcol==0){ %>
-							</tr>
-							<%  } %>
-						<% } %>
+	<table>
+		<%int numcol=0; %>
+		<% for (int i=0;i<titles.length;i++) {
+		if(numcol==0){ %>
+		<tr>
+		<%} 
+			numcol++;
+			if(numcol>5)
+			numcol=0;%>
+			<td>
+				<a href="getImage?title=<%=titles[i]%>" rel="shadowbox;player=img">
+				<img alt="" src="getImage?isthum=1&title=<%=titles[i]%>"></img> 
+				</a>
+				<br />
+				<FORM ENCTYPE="multipart/form-data"
+					ACTION="delimage?title=<%=titles[i] %>" METHOD=POST>
 
-					</table>
+					<INPUT TYPE="submit" VALUE="delete">
+
+				</FORM></td>
+			<%if(numcol==0){ %>
+		</tr>
+		<%  } %>
+		<%} %>
+
+	</table>
 </body>
 </html>
