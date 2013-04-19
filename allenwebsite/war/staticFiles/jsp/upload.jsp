@@ -1,4 +1,4 @@
-<%@page import="java.io.*,com.allen.website.gallary.Picture,javax.jdo.PersistenceManager,com.allen.website.PMF"%>
+<%@page import="java.io.*,com.allen.website.DBBean.Picture,javax.jdo.PersistenceManager,com.allen.website.PMF"%>
 <%
 	
 	String contentType=request.getContentType();

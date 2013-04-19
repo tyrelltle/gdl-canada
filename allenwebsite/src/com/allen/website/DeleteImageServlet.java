@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.allen.website.gallary.Picture;
+import com.allen.website.DBBean.Picture;
 
 /**
  * GET requests return the promotional image associated with the movie with the

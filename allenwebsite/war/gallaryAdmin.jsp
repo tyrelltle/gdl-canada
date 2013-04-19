@@ -32,20 +32,15 @@ body {
 <jsp:useBean id="gallaryBean" class="com.allen.website.bean.GallaryBean" /> 
 <%
 
-/*	HttpSession ses = request.getSession(true);
-
-  if((Boolean)ses.getAttribute("postback"))
-  {
-	  
-	  response.sendRedirect("gallaryAdmin.jsp");
-  }*/
+	HttpSession ses = request.getSession(true);
+	Boolean issa=(Boolean)ses.getAttribute("admin");
   gallaryBean.init(); 
   String titles[]=gallaryBean.getTitles();
   %>
 
 
 
-
+<%  if(null!=issa && issa){ %>
 	<FORM ENCTYPE="multipart/form-data" ACTION="addImage" METHOD=POST>
 		<br><br><br>
 			<table  border="2" float="center">
@@ -68,11 +63,7 @@ body {
 
 			</table>
 	</FORM>
-
-
-
-
-
+<%} %>
 
 
 	<table>
@@ -89,12 +80,16 @@ body {
 				<img alt="" src="getImage?isthum=1&title=<%=titles[i]%>"></img> 
 				</a>
 				<br />
+				
+				<%if(null!=issa && issa) {%>
 				<FORM ENCTYPE="multipart/form-data"
 					ACTION="delimage?title=<%=titles[i] %>" METHOD=POST>
 
 					<INPUT TYPE="submit" VALUE="delete">
 
-				</FORM></td>
+				</FORM>
+				<%} %>
+				</td>
 			<%if(numcol==0){ %>
 		</tr>
 		<%  } %>

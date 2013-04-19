@@ -14,7 +14,7 @@ import org.apache.commons.fileupload.FileItemStream;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
-import com.allen.website.gallary.Picture;
+import com.allen.website.DBBean.Picture;
 @SuppressWarnings("serial")
 public class StoreImageServlet extends HttpServlet {
 	
