@@ -20,6 +20,11 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
   	</servlet>
   	
   	<servlet>
+    	<servlet-name>Message</servlet-name>
+    	<servlet-class>com.allen.website.MessageServlet</servlet-class>
+  	</servlet>
+  	
+  	<servlet>
     	<servlet-name>Logon</servlet-name>
     	<servlet-class>com.allen.website.LogonServlet</servlet-class>
     	
@@ -49,6 +54,11 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
     	<url-pattern>/user/signup</url-pattern>
   	</servlet-mapping>
  	
+ 	<servlet-mapping>
+    	<servlet-name>Message</servlet-name>
+    	<url-pattern>/message</url-pattern>
+  	</servlet-mapping>
+  	
  	<servlet-mapping>
     	<servlet-name>Logon</servlet-name>
     	<url-pattern>/user/logon</url-pattern>

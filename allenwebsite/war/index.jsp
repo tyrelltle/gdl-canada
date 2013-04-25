@@ -18,6 +18,7 @@
 			<script type="text/javascript">
 			$(document).ready(function(){
 					$('#gallaryHref').click(function(e){e.preventDefault();$('#ifr').prop('src','gallaryAdmin.jsp');});	
+					$('#messageHref').click(function(e){e.preventDefault();$('#ifr').prop('src','messages/messageadmin.jsp');});	
 					
 					<%String logonurl=loggedon?"user/logout":"user/logon.jsp";%>
 					$('#loginHref').click(function(e){window.location="<%=logonurl%>";});	
@@ -101,6 +102,10 @@
 				
 				<li style="margin-left: 51px;">
 					<a id="gallaryHref" href="" class="hide" style="width: 140px;">product gallary &nbsp;&nbsp;</a>
+				</li>
+				
+				<li style="margin-left: 51px;">
+					<a id="messageHref" href="" class="hide" style="width: 140px;">Leave Messages&nbsp;&nbsp;</a>
 				</li>
 				
 				<li style="margin-left: 19px;">

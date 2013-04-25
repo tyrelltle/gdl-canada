@@ -30,25 +30,9 @@ public class GetImageInfoServlet extends HttpServlet {
 
        
        List<Picture> results = (List<Picture>) query.execute();
-       JSONObject json=new JSONObject();
-       try {
-    	  
-    	Iterator<Picture> i=results.iterator();
-    	while(i.hasNext())
-		{
-    		Picture p=(Picture) i.next();
-    		json.put(p.getId().toString(),p.getTitle());//p.getTitle());
+       
 		
-		}
-    	
-    	resp.setContentType("application/json");
-        resp.getWriter().write(json.toString());
-	} catch (JSONException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-		
-		
+		pm.close();
 		
 		
 	}
