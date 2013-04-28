@@ -28,13 +28,13 @@ body {
 </style>	
 </head>
 <body id="Content">
-
+<%try{ %>
 <jsp:useBean id="gallaryBean" class="com.allen.website.bean.GallaryBean" /> 
 <%
 
 	HttpSession ses = request.getSession(true);
 	Boolean issa=(Boolean)ses.getAttribute("admin");
-  gallaryBean.init(); 
+  gallaryBean.init(request); 
   String titles[]=gallaryBean.getTitles();
   %>
 
@@ -96,5 +96,7 @@ body {
 		<%} %>
 
 	</table>
+	
+	<%}catch(Exception e){e.printStackTrace();} %>
 </body>
 </html>

@@ -23,6 +23,10 @@ import com.google.appengine.api.images.Transform;
  */
 public class GetImageServlet extends HttpServlet {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public static final int thumsize=200;
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -75,7 +79,8 @@ public class GetImageServlet extends HttpServlet {
         query.setRange(0, 1);
 
         try {
-            List<Picture> results = (List<Picture>) query.execute(title);
+            @SuppressWarnings("unchecked")
+			List<Picture> results = (List<Picture>) query.execute(title);
             if (results.iterator().hasNext()) {
                 // If the results list is non-empty, return the first (and only)
                 // result

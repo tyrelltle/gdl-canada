@@ -13,18 +13,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.allen.website.DBBean.Picture;
 import com.allen.website.DBBean.User;
-import com.google.appengine.api.images.Image;
-import com.google.appengine.api.images.ImagesService;
-import com.google.appengine.api.images.ImagesServiceFactory;
-import com.google.appengine.api.images.Transform;
 
 /**
  * GET requests return the promotional image associated with the movie with the
  * title specified by the title query string parameter.
  */
 public class LogonServlet extends HttpServlet {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
@@ -41,7 +41,8 @@ public class LogonServlet extends HttpServlet {
 	        Query query = pm.newQuery(User.class, "username == '"+username+"' && password == '"+password+"'");
 
 	       
-            List<User> results = (List<User>) query.execute();
+            @SuppressWarnings("unchecked")
+			List<User> results = (List<User>) query.execute();
             if (null==results||results.size()!=0) {
                 // If the results list is non-empty, return the first (and only)
                 // result

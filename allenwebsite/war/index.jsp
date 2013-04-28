@@ -1,3 +1,5 @@
+<%try{ %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -18,7 +20,7 @@
 			<script type="text/javascript">
 			$(document).ready(function(){
 					$('#gallaryHref').click(function(e){e.preventDefault();$('#ifr').prop('src','gallaryAdmin.jsp');});	
-					$('#messageHref').click(function(e){e.preventDefault();$('#ifr').prop('src','messages/messageadmin.jsp');});	
+					$('#messageHref').click(function(e){e.preventDefault();$('#ifr').prop('src','messageadmin.jsp');});	
 					
 					<%String logonurl=loggedon?"user/logout":"user/logon.jsp";%>
 					$('#loginHref').click(function(e){window.location="<%=logonurl%>";});	
@@ -132,4 +134,5 @@
 
 
 </body>
+<%}catch(Exception e){e.printStackTrace();} %>
 </html>

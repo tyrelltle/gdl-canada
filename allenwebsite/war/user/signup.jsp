@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%try{ %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -29,19 +30,7 @@ body {
 </head>
 <body id="Content">
 
-<jsp:useBean id="gallaryBean" class="com.allen.website.bean.GallaryBean" /> 
-<%
 
-/*	HttpSession ses = request.getSession(true);
-
-  if((Boolean)ses.getAttribute("postback"))
-  {
-	  
-	  response.sendRedirect("gallaryAdmin.jsp");
-  }*/
-  gallaryBean.init(); 
-  String titles[]=gallaryBean.getTitles();
-  %>
 
 
 
@@ -55,4 +44,5 @@ body {
 
 	
 </body>
+<%}catch(Exception e){e.printStackTrace();} %>
 </html>

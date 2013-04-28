@@ -2,8 +2,6 @@ package com.allen.website;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
-
 import javax.jdo.PersistenceManager;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -24,16 +22,15 @@ public class StoreImageServlet extends HttpServlet {
 		InputStream in = null;
 		try 
 		{
-		       boolean isMultipart = ServletFileUpload.isMultipartContent(req);
+		       ServletFileUpload.isMultipartContent(req);
 	           ServletFileUpload upload = new ServletFileUpload();
 	           FileItemIterator iter = upload.getItemIterator(req);
-	           List list = null;
 	           while(iter.hasNext()) 
 	           {
 	               FileItemStream item = iter.next();
-	               String name  = item.getFieldName();
-	               String fileName = item.getName();
-	               InputStream stream = item.openStream();
+	               item.getFieldName();
+	               item.getName();
+	               item.openStream();
 	               if(item.isFormField()) 
 	               {
 	                   // Process regular form field (input type="text|radio|checkbox|etc", select, etc).

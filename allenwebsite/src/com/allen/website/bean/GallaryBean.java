@@ -10,18 +10,25 @@ import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.Iterator;
 
+import javax.servlet.http.HttpServletRequest;
+
 import com.google.appengine.labs.repackaged.org.json.JSONException;
 import com.google.appengine.labs.repackaged.org.json.JSONObject;
 
 public class GallaryBean implements java.io.Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String[] ids=null;
 	private String[] titles=null;
-	
-	public void init() throws JSONException, IOException
+	private HttpServletRequest req=null;
+	public void init(HttpServletRequest reqe) throws JSONException, IOException
 	{
+		req=reqe;
 		JSONObject json;
-	    InputStream is = new URL("http://localhost:8888/getimagelist").openStream();
+	    InputStream is = new URL(req.getRequestURL()+"/../getimagelist").openStream();
 	    try {
 	      BufferedReader rd = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
 	      String jsonText = readAll(rd);
@@ -29,7 +36,8 @@ public class GallaryBean implements java.io.Serializable{
 	      int len=json.length();
 	      titles=new String[len];
 	      ids=new String[len];
-	      Iterator i=json.keys();
+	      @SuppressWarnings("rawtypes")
+		Iterator i=json.keys();
 	      int arrind=0;
 	      while(i.hasNext())
 	      {

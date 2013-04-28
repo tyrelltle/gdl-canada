@@ -1,9 +1,5 @@
 package com.allen.website.DBBean;
 
-import com.google.appengine.api.datastore.Blob;
-import com.google.appengine.api.datastore.Key;
-
-import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.IdGeneratorStrategy;
 import javax.jdo.annotations.IdentityType;
 import javax.jdo.annotations.PersistenceCapable;

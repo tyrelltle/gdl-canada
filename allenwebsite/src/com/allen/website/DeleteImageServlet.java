@@ -19,11 +19,16 @@ import com.allen.website.DBBean.Picture;
  */
 public class DeleteImageServlet extends HttpServlet {
 
-    @Override
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Override
     public void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws IOException {
         String title = req.getParameter("title");
-        Picture pic = delPic(title);
+        delPic(title);
 
      
         
@@ -48,7 +53,8 @@ public class DeleteImageServlet extends HttpServlet {
         query.setRange(0, 1);
 
         try {
-            List<Picture> results = (List<Picture>) query.execute(title);
+            @SuppressWarnings("unchecked")
+			List<Picture> results = (List<Picture>) query.execute(title);
             if (results.iterator().hasNext()) {
                 // If the results list is non-empty, return the first (and only)
                 // result

@@ -20,13 +20,18 @@ public class Message {
     private String message;
 
 
-
+    
     public Message(String u, String p)
     {
     	username=u;
     	message=p;
     }
 
+    public Key getId()
+    {
+    	return id;
+    }
+    
     public String getUsername() {
         return username;
     }

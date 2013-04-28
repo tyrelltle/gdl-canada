@@ -3,10 +3,7 @@ package com.allen.website;
 
 
 import java.io.IOException;
-import java.util.List;
-
 import javax.jdo.PersistenceManager;
-import javax.jdo.Query;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,14 +11,14 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.allen.website.DBBean.Message;
-import com.allen.website.DBBean.Picture;
-import com.allen.website.DBBean.User;
-import com.google.appengine.api.images.Image;
-import com.google.appengine.api.images.ImagesService;
-import com.google.appengine.api.images.ImagesServiceFactory;
-import com.google.appengine.api.images.Transform;
+import com.google.appengine.api.datastore.KeyFactory;
 
 public class MessageServlet extends HttpServlet {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
@@ -34,15 +31,26 @@ public class MessageServlet extends HttpServlet {
 	        String mesg=req.getParameter("msg");
 	        String action=req.getParameter("action");
             
-            
-            Message msg=new Message(username,mesg);
-            pm.makePersistent(msg);
+	        if(action.equals("add"))
+	        {
+	            Message msg=new Message(username,mesg);
+	            pm.makePersistent(msg);
+	        }
+	        else if(action.equals("delete"))
+	        {
+	        	String oid=req.getParameter("id"); 
+	        	if(oid==null)
+	        	{
+	        		resp.getWriter().write("parameter id is not passed in");
+	        		return;
+	        	}
+	        	long id=Long.valueOf(oid);
+	        	pm.deletePersistent(pm.getObjectById(Message.class,KeyFactory.createKey(Message.class.getSimpleName(), id)));
+	        	
+	        }
             pm.close();
-
-            resp.sendRedirect("../messages/messageadmin.jsp");
-             
-	        
-	        
+        	
+            resp.sendRedirect("messageadmin.jsp");
 	}
 
 	

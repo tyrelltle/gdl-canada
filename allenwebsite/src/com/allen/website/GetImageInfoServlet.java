@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 
-import javax.jdo.FetchGroup;
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 import javax.servlet.http.HttpServlet;
@@ -24,6 +23,7 @@ public class GetImageInfoServlet extends HttpServlet {
 
 		Query query = pm.newQuery(Picture.class);
 
+		@SuppressWarnings("unchecked")
 		List<Picture> results = (List<Picture>) query.execute();
 		JSONObject json = new JSONObject();
 		try {

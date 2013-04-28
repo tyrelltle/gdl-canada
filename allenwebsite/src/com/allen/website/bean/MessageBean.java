@@ -1,15 +1,7 @@
 package com.allen.website.bean;
 
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.net.URL;
-import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import javax.jdo.PersistenceManager;
@@ -17,15 +9,18 @@ import javax.jdo.Query;
 
 import com.allen.website.PMF;
 import com.allen.website.DBBean.Message;
-import com.allen.website.DBBean.Picture;
 import com.google.appengine.labs.repackaged.org.json.JSONException;
-import com.google.appengine.labs.repackaged.org.json.JSONObject;
 
 public class MessageBean implements java.io.Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public List<Message> msgs=null;
 
 	
+	@SuppressWarnings("unchecked")
 	public void init() throws JSONException, IOException
 	{
 		PersistenceManager pm = PMF.get().getPersistenceManager();

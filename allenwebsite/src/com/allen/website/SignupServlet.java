@@ -13,18 +13,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.allen.website.DBBean.Picture;
 import com.allen.website.DBBean.User;
-import com.google.appengine.api.images.Image;
-import com.google.appengine.api.images.ImagesService;
-import com.google.appengine.api.images.ImagesServiceFactory;
-import com.google.appengine.api.images.Transform;
 
 /**
  * GET requests return the promotional image associated with the movie with the
  * title specified by the title query string parameter.
  */
 public class SignupServlet extends HttpServlet {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
@@ -43,7 +43,8 @@ public class SignupServlet extends HttpServlet {
 	        query.setRange(0, 1);
 
 	       
-            List<User> results = (List<User>) query.execute(username);
+            @SuppressWarnings("unchecked")
+			List<User> results = (List<User>) query.execute(username);
             if (null==results||results.size()!=0) {
             	User usr=results.get(0);
             	session.setAttribute("username", usr.getUsername());
