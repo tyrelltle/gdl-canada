@@ -5,8 +5,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Messages</title>
+<jsp:useBean id="msgBean" class="com.allen.website.bean.MessageBean" /> 
+<%
+
+	HttpSession ses = request.getSession(true);
+	Boolean issa=(Boolean)ses.getAttribute("admin");
 	
-	
+	msgBean.init(request); 
+	List<Message> msgs=msgBean.msgs;
+  %>
+<script type="text/javascript" src="./staticFiles/jquery-1.9.1.min.js"></script>
+
 	
 <style type="text/css" media="screen">
 body {
@@ -21,18 +30,44 @@ body {
 	padding:15px;
 	}
 </style>	
+
+
+<script>
+$("document").ready(
+		function(){	
+			var cursor=0;
+			var numpages=<%=msgBean.numPages%>;
+			var start=<%=msgBean.start%>;
+			var end=<%=msgBean.end%>;
+			var npp=<%=msgBean.numPostPerPage%>;
+			var curpage=<%=msgBean.curpage%>;
+			var txt="";
+ 
+			txt=curpage+1+" of"+numpages+" pages   ";
+			
+			if(start-npp>=0)
+				{txt+="<a href='messageadmin.jsp?start="+(start-npp)+
+												"&end="+(end-npp)+
+												"&curpage="+(curpage-1)+
+												"&numpage="+numpages+"'> back </a>         ";}
+			if(end+npp<=numpages*npp)
+				{txt+="<a href='messageadmin.jsp?start="+end+
+					"&end="+(end+npp)+
+					"&curpage="+(curpage+1)+
+					"&numpage="+numpages+"'> forward </a>";}
+			
+			
+			$("div[id='pagenumbers']").html(txt);//"<a href='messageadmin.jsp?start=0&end=8&numpage=10'>aloha</a>");
+			
+		}
+		
+		);
+
+</script>	
 </head>
 <body id="Content">
 
-<jsp:useBean id="msgBean" class="com.allen.website.bean.MessageBean" /> 
-<%
 
-	HttpSession ses = request.getSession(true);
-	Boolean issa=(Boolean)ses.getAttribute("admin");
-	
-	msgBean.init(); 
-	List<Message> msgs=msgBean.msgs;
-  %>
 
 
 
@@ -57,15 +92,12 @@ body {
 
 	<table>
 		<%Iterator i=msgs.iterator(); %>
-		<% while(i.hasNext()) {%>
-		
-		<tr>
-		
-			
+		<% while(i.hasNext()) {%>	
+		<tr>		
 			<td>
 				<%Message m=(Message)i.next(); %>
 				
-				User  <em><%=m.getUsername()%></em> 
+				User  <em><%=m.getUsername()%></em> at <em><%=m.getDate() %></em>
 			</td>	
 		</tr>
 		
@@ -88,6 +120,8 @@ body {
 		<%} %>
 
 	</table>
+<div id="pagenumbers">
 
+</div>
 </body>
 </html>

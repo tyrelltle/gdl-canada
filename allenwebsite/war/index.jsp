@@ -5,7 +5,8 @@
 <head>
 
 <%HttpSession ses = request.getSession(true);
-  boolean loggedon=(null!=ses.getAttribute("username"));
+  String username=(String)ses.getAttribute("username");
+  boolean loggedon=(null!=username);
 %>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	
@@ -21,13 +22,13 @@
 			$(document).ready(function(){
 					$('#gallaryHref').click(function(e){e.preventDefault();$('#ifr').prop('src','gallaryAdmin.jsp');});	
 					$('#messageHref').click(function(e){e.preventDefault();$('#ifr').prop('src','messageadmin.jsp');});	
-					
+					$('#messageHref').click(function(e){e.preventDefault();$('#ifr').prop('src','messageadmin.jsp');});	
 					<%String logonurl=loggedon?"user/logout":"user/logon.jsp";%>
 					$('#loginHref').click(function(e){window.location="<%=logonurl%>";});	
 			});
 			</script>
 
-							<style type="text/css">
+<style type="text/css">
 .contents td {
 	text-align: justify;
 }
@@ -89,6 +90,12 @@
 
 
 		<div class="menu" style="z-index: 1500">
+		
+		
+		<%if(loggedon) {%>
+		
+		<p style="text-align: right;color:#754215;font-weight: bold">Hello <em><%= username%></em></p>
+		<%} %>
 			<ul>
 				<li style="margin-left: 120px;">
 					<a class="hide"
@@ -119,6 +126,8 @@
 				
 				</li>
 			</ul>
+			
+			
 		</div>
 
 		<div id="apDiva">

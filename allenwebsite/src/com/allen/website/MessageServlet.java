@@ -3,6 +3,8 @@ package com.allen.website;
 
 
 import java.io.IOException;
+import java.util.Date;
+
 import javax.jdo.PersistenceManager;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -33,7 +35,7 @@ public class MessageServlet extends HttpServlet {
             
 	        if(action.equals("add"))
 	        {
-	            Message msg=new Message(username,mesg);
+	            Message msg=new Message(username,mesg,new Date());
 	            pm.makePersistent(msg);
 	        }
 	        else if(action.equals("delete"))
